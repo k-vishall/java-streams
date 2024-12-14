@@ -11,6 +11,9 @@ Welcome to the **Java Streams Practice Repository**! This repository is intended
 2. [Filtering and Mapping](#2-filtering-and-mapping)
 3. [Remove Duplicates](#3-remove-duplicates)
 4. [Concatenate Strings](#4-concatenate-strings)
+5. [Find Maximum and Minimum](#5-find-maximum-and-minimum)
+6. [Sort Strings Alphabetically](#6-sort-strings-alphabetically)
+7. [Flatten Nested Lists](#7-flatten-nested-lists)
 
 ---
 
@@ -80,6 +83,53 @@ List<Integer> uniqueNumbers = numbers.stream()
 List<String> words = Arrays.asList("Java", "Streams", "Practice");
 String result = words.stream()
                      .collect(Collectors.joining(","));
+```
+
+---
+
+### 5. Find Maximum and Minimum
+
+**Problem:** Find the maximum and minimum values in a list.
+
+**Objective:** Use `max()` and `min()` methods.
+
+**Example Code:**
+```java
+List<Integer> numbers = Arrays.asList(10, 20, 30);
+int max = numbers.stream().max(Integer::compareTo).orElseThrow();
+int min = numbers.stream().min(Integer::compareTo).orElseThrow();
+```
+
+---
+
+### 6. Sort Strings Alphabetically
+
+**Problem:** Sort a list of strings alphabetically.
+
+**Objective:** Use `sorted()` for natural ordering.
+
+**Example Code:**
+```java
+List<String> words = Arrays.asList("banana", "apple", "grape");
+List<String> sortedWords = words.stream()
+                                .sorted()
+                                .collect(Collectors.toList());
+```
+
+---
+
+### 7. Flatten Nested Lists
+
+**Problem:** Flatten a list of lists into a single list.
+
+**Objective:** Use `flatMap()` to handle nested lists.
+
+**Example Code:**
+```java
+List<List<Integer>> nested = Arrays.asList(Arrays.asList(1, 2), Arrays.asList(3, 4));
+List<Integer> flatList = nested.stream()
+                               .flatMap(List::stream)
+                               .collect(Collectors.toList());
 ```
 
 ## How to Use

@@ -14,6 +14,8 @@ Welcome to the **Java Streams Practice Repository**! This repository is intended
 5. [Find Maximum and Minimum](#5-find-maximum-and-minimum)
 6. [Sort Strings Alphabetically](#6-sort-strings-alphabetically)
 7. [Flatten Nested Lists](#7-flatten-nested-lists)
+8. [Top Three Highest Values](#8-top-three-highest-values)
+9. [Check All Positive Numbers](#9-check-all-positive-numbers)
 
 ---
 
@@ -132,12 +134,45 @@ List<Integer> flatList = nested.stream()
                                .collect(Collectors.toList());
 ```
 
+---
+
+### 8. Top Three Highest Values
+
+**Problem:** Find the top three highest integers in a list.
+
+**Objective:** Use `sorted()` and `limit(3)`.
+
+**Example Code:**
+```java
+List<Integer> numbers = Arrays.asList(50, 20, 30, 10, 40);
+List<Integer> topThree = numbers.stream()
+                                .sorted(Comparator.reverseOrder())
+                                .limit(3)
+                                .collect(Collectors.toList());
+```
+
+---
+
+### 9. Check All Positive Numbers
+
+**Problem:** Verify if all integers in a list are positive.
+
+**Objective:** Use `allMatch()` to check the condition.
+
+**Example Code:**
+```java
+List<Integer> numbers = Arrays.asList(10, 20, -30, 40);
+boolean allPositive = numbers.stream().allMatch(num -> num > 0);
+```
+
+---
+
 ## How to Use
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/java-streams-practice.git
-   cd java-streams-practice
+   git clone https://github.com/k-vishall/java-streams.git
+   cd java-streams
    ```
 2. Navigate to the task of your choice.
 3. Open the `TaskDescription.md` and `Solution.java` for that task.

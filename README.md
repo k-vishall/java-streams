@@ -13,7 +13,7 @@ This repository contains a collection of Java Streams concepts, interview questi
 ### 🛠️ **How to Use**  
 - Clone the repository:  
   ```bash
-  git clone https://github.com/your-username/Java-Streams-Interview-Questions.git
+  git clone https://github.com/k-vishall/Java-Streams-Interview-Questions.git
   ```  
 - Browse through the different sections and attempt the questions.  
 - Solutions are provided for reference, but try solving them yourself first!  
